@@ -1,0 +1,72 @@
+
+@font-face {
+    font-family: RobotoMono;
+    src: url(./Roboto_Mono/static/RobotoMono-Regular.ttf);
+  }
+@font-face {
+    font-family: RobotoMonoBold;
+    src: url(./Roboto_Mono/static/RobotoMono-Bold.ttf);
+  }
+
+html,body{
+    height:128vh;
+    width:205vh;
+    background-color:#e1f4f3;
+}
+
+.editor{
+    height:100%;
+    width: 100%;
+    background-color: #e1f4f3;
+}
+#op{
+    height:98vh;
+    width: 100%;
+    background-color: white;
+    border:1px solid #706c61;
+}
+.entry{
+    height:205px;
+    width: 205vh;
+    border-radius: 5px;
+    background-color:#706c61;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top:510px;
+}
+
+button{
+    position:fixed;
+    left:690px;
+    opacity: 0.6;
+    border-radius: 5px;
+    border: none;
+    background-color: #e1f4f3;
+    height: 30px;
+    width: 100px;
+    font-family: RobotoMono;
+}
+
+button:hover{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+textarea{
+    height:190px;
+    width:100%;
+    background-color: #333333;
+    color: white;
+    font-family:RobotoMono;
+    border-radius: 5px;
+    padding:5px;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid #e1f4f3; */
+}
+textarea:focus{
+    outline:none;
+    background-color: #333333;
+}

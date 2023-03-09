@@ -1,0 +1,37 @@
+@font-face {
+    font-family: RobotoMono;
+    src: url(./Roboto_Mono/static/RobotoMono-Regular.ttf);
+  }
+  @font-face {
+    font-family: RobotoMonoBold;
+    src: url(./Roboto_Mono/static/RobotoMono-Bold.ttf);
+  }
+
+html,body{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background-color: #e1f4f3;
+
+}
+button{
+    width:200px;
+    height:35px;
+    border-radius: 50px;
+    background-color: #333333;
+    color: white;
+    font-family: RobotoMono;
+     border:none;
+
+}
+
+#player{
+    border-radius: 10px;
+  
+}
+
+button:hover{
+    background-color: #706c61;
+    transition: 0.3s;
+}

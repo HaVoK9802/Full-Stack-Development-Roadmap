@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDE for Practice</title>
+    <link rel="stylesheet" href="ide.css" />
+  </head>
+  <body>
+    <button onclick="reloadIframe();">Refresh</button>
+
+    <div class="editor">
+      <div class="entry">
+        <textarea
+          placeholder="HTML"
+          name=""
+          id="html"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <textarea
+          placeholder="CSS"
+          name=""
+          id="css"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <textarea
+          placeholder="JS"
+          name=""
+          id="js"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+      <iframe id="op" frameborder="0"></iframe>
+    </div>
+
+    <script src="ide.js"></script>
+  </body>
+</html>

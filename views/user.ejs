@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<!--tells the browser which version of the html you are using.-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="stylesheet" href="user.css">
+    <title>Comp.endium</title>
+  </head>
+  <body>
+    
+    <div class="signInorLogIn" id="suOli">
+       <div class="SignUpbox" id="suBox">
+        <svg class="close" onclick="clos(0)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z"/></svg>
+        <div class="JoinOrWelcome"> Start Your Journey</div>
+          <button class="signUpOrLogInButton">
+            <svg width="25" height="25" class="co">
+            <g fill="none" fill-rule="evenodd">
+              <path d="M20.66 12.7c0-.61-.05-1.19-.15-1.74H12.5v3.28h4.58a3.91 3.91 0 0 1-1.7 2.57v2.13h2.74a8.27 8.27 0 0 0 2.54-6.24z" fill="#4285F4"></path>
+              <path d="M12.5 21a8.1 8.1 0 0 0 5.63-2.06l-2.75-2.13a5.1 5.1 0 0 1-2.88.8 5.06 5.06 0 0 1-4.76-3.5H4.9v2.2A8.5 8.5 0 0 0 12.5 21z" fill="#34A853"></path>
+              <path d="M7.74 14.12a5.11 5.11 0 0 1 0-3.23v-2.2H4.9A8.49 8.49 0 0 0 4 12.5c0 1.37.33 2.67.9 3.82l2.84-2.2z" fill="#FBBC05"></path>
+              <path d="M12.5 7.38a4.6 4.6 0 0 1 3.25 1.27l2.44-2.44A8.17 8.17 0 0 0 12.5 4a8.5 8.5 0 0 0-7.6 4.68l2.84 2.2a5.06 5.06 0 0 1 4.76-3.5z" fill="#EA4335"></path>
+            </g>
+            </svg>
+          Sign Up with Google
+          </button>
+          <button class="signUpOrLogInButton"><svg width="25" height="25" fill="#3B5998" class="co"><path d="M20.3 4H4.7a.7.7 0 0 0-.7.7v15.6c0 .38.32.7.7.7h8.33v-6.38h-2.12v-2.65h2.12V9.84c0-2.2 1.4-3.27 3.35-3.27.94 0 1.75.07 1.98.1v2.3H17c-1.06 0-1.31.5-1.31 1.24v1.76h2.65l-.53 2.65H15.7l.04 6.38h4.56a.7.7 0 0 0 .71-.7V4.7a.7.7 0 0 0-.7-.7" fill-rule="evenodd"></path></svg>
+            Sign Up with Facebook</button>
+          <button onclick="window.location.href = '/signUp';" class="signUpOrLogInButton"><svg width="25" height="25" class="co"><path d="M4 6v13h17V6H4zm5.9 7.97l2.6 2.12 2.6-2.12 4.14 4.02H5.76l4.15-4.02zm-4.88 3.32V9.97l4.1 3.35-4.1 3.97zm10.87-3.97l4.1-3.35v7.32l-4.1-3.97zm4.1-6.3v1.64l-7.49 6.12-7.48-6.13V7.01h14.96z"></path></svg>
+            Sign Up with email</button> 
+          <div class="aldreadyHaveAnAccount">Aldready Have An Account?<a class="LogIn" onclick="logIn()" > Log In</a></div>
+       </div>
+       <div class="LogInbox" id="liBox">
+        <svg class="close" onclick="clos(1)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z"/></svg>
+        <div class="JoinOrWelcome"> Welcome Back</div>
+        <button class="signUpOrLogInButton"><svg width="25" height="25" class="co">
+          <g fill="none" fill-rule="evenodd">
+            <path d="M20.66 12.7c0-.61-.05-1.19-.15-1.74H12.5v3.28h4.58a3.91 3.91 0 0 1-1.7 2.57v2.13h2.74a8.27 8.27 0 0 0 2.54-6.24z" fill="#4285F4"></path>
+            <path d="M12.5 21a8.1 8.1 0 0 0 5.63-2.06l-2.75-2.13a5.1 5.1 0 0 1-2.88.8 5.06 5.06 0 0 1-4.76-3.5H4.9v2.2A8.5 8.5 0 0 0 12.5 21z" fill="#34A853"></path>
+            <path d="M7.74 14.12a5.11 5.11 0 0 1 0-3.23v-2.2H4.9A8.49 8.49 0 0 0 4 12.5c0 1.37.33 2.67.9 3.82l2.84-2.2z" fill="#FBBC05"></path>
+            <path d="M12.5 7.38a4.6 4.6 0 0 1 3.25 1.27l2.44-2.44A8.17 8.17 0 0 0 12.5 4a8.5 8.5 0 0 0-7.6 4.68l2.84 2.2a5.06 5.06 0 0 1 4.76-3.5z" fill="#EA4335"></path>
+          </g>
+          </svg>
+          Sign in with Google</button>
+        <button class="signUpOrLogInButton"><svg width="25" height="25" fill="#3B5998" class="co"><path d="M20.3 4H4.7a.7.7 0 0 0-.7.7v15.6c0 .38.32.7.7.7h8.33v-6.38h-2.12v-2.65h2.12V9.84c0-2.2 1.4-3.27 3.35-3.27.94 0 1.75.07 1.98.1v2.3H17c-1.06 0-1.31.5-1.31 1.24v1.76h2.65l-.53 2.65H15.7l.04 6.38h4.56a.7.7 0 0 0 .71-.7V4.7a.7.7 0 0 0-.7-.7" fill-rule="evenodd"></path></svg>
+          Sign in with Facebook</button>
+        <button onclick="window.location.href = '/logIn';" class="signUpOrLogInButton"><svg width="25" height="25" class="co"><path d="M4 6v13h17V6H4zm5.9 7.97l2.6 2.12 2.6-2.12 4.14 4.02H5.76l4.15-4.02zm-4.88 3.32V9.97l4.1 3.35-4.1 3.97zm10.87-3.97l4.1-3.35v7.32l-4.1-3.97zm4.1-6.3v1.64l-7.49 6.12-7.48-6.13V7.01h14.96z"></path></svg>
+          Sign in with email</button> 
+          <div class="aldreadyHaveAnAccount">No Account?<a  class="LogIn" onclick="signUp()"> Create one</a></div>
+       </div>
+    </div>
+    <header id="headr">
+      <div id="navbar" class="nav">
+        <a href="" >
+        <div class="logo_container">
+          <img class="logo" src="./images/road-signs-svgrepo-com.svg" alt=""/>
+          <div class="Comp_endium">Comp.endium</div>
+        </div>
+        </a>
+        <div class="navButtons">
+          <!---- <div class="mainNav">-->
+          <a href="/ide" target="_blank"><li class="rm">Playground</li></a>
+          <a href="/contribute"><li class="rm">Contribute</li></a>
+          <!-- <a href=""><li class="rm" id="aboutUs">Donate</li></a> -->
+          <a href=""><li onclick="logOut()" >Log Out</li></a>
+          <button id="loggedInUser" class="SignIn" >
+            <a  class="signInAnchor"><%=userLoggedIn%></a>
+          </button>
+          <!-- </div> -->
+        </div>
+      </div>
+      <div class="headerLeft">
+        <div class="mainHeaderText">Know Your Path.</div>
+        <div class="quote">
+          Well begun is half done.
+          <div class="getStarted">
+            <button class="SignIn" id="getStarted">
+              <a href="" class="signInAnchor">Get Started</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="FullStackRM">
+      <div class="FSTitle">Full Stack Developer Roadmap</div>
+      <div class="FSSubTitle">
+        Investing your valuable time looking for the best free resources to
+        learn Full Stack Development online? Don't worry! We have compiled and
+        structured free resources from the internet that are essential to get
+        you started on this journey.
+      </div>
+    </div>
+    <div class="dummy">
+      <div class="accContainer">
+        <div class="accordionTop">
+          <h2>Basic Data Structures and Algorithms</h2>
+          <div class="expContr" onclick="d(0,[0,1])">
+          <svg
+            class="expand"
+            xmlns="http://www.w3.org/2000/svg"
+            height="48"
+            width="48"
+          >
+          <path d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z" />
+          </svg>
+          <svg   class="retract"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m24 30.45 8.65-8.65-2.15-2.1-6.5 6.5-6.5-6.5-2.15 2.1ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 24q0-4.15 1.575-7.8 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24 4q4.15 0 7.8 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Zm0-3q7.1 0 12.05-4.975Q41 31.05 41 24q0-7.1-4.95-12.05Q31.1 7 24 7q-7.05 0-12.025 4.95Q7 16.9 7 24q0 7.05 4.975 12.025Q16.95 41 24 41Zm0-17Z"/>
+          </svg>
+        </div>
+        </div>
+        <div class="accDesc">
+          <div class="subAccordtion">
+            <div onclick="sendUrl('www.youtube.com/watch?v=W6NZfCO5SIk',0);window.location.href='/vtab'" class="links"> 
+            
+             JavaScript
+            
+          </div>
+            <% if(chkbxs[0]){ %>
+              <style>
+                #cb0{
+
+                  display: block;
+                }
+                #ucb0{
+
+                  display: none;
+                }
+                .subAccordion{
+                  display:flex;
+                  justify-content:space-between
+                }
+              </style>
+
+           <svg id="ucb0" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+           <svg id="cb0" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+            <path
+              d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+            />
+            </svg>
+           <%}else{ %>
+            <style>
+              #cb0{
+                  display: none;
+              }
+              #ucb0{
+                  display: block;
+              }
+            </style>
+            </svg>
+            <svg id="cb0" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+            <path
+              d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+            />
+            <svg id="ucb0" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+            <%} %>
+          </div>
+          <div class="subAccordtion">
+            <div onclick="sendUrl('www.youtube.com/watch?v=t2CEgPsws3U',1);window.location.href='/vtab'" class="links"> 
+            
+              DSA in JavaScript
+            
+          </div>
+            <% if(chkbxs[1]){ %>
+              <style>
+                #cb1{
+
+                  display: block;
+                }
+                #ucb1{
+
+                  display: none;
+                }
+                .subAccordion{
+                  display:flex;
+                  justify-content:space-between
+                }
+              </style>
+
+           <svg id="ucb1" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+           <svg id="cb1" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+            <path
+              d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+            />
+            </svg>
+           <%}else{ %>
+            <style>
+              #cb1{
+                  display: none;
+              }
+              #ucb1{
+                  display: block;
+              }
+            </style>
+            </svg>
+            <svg id="cb1" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+            <path
+              d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+            />
+            <svg id="ucb1" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+            <%} %>
+          </div>
+          </div>
+
+        </div>
+        <div class="accContainer">
+          <div class="accordionMid">
+            <h2>Front-end Development</h2>
+            <div class="expContr" onclick="d(1,[2,3,4,5,6,7,8])">
+            <svg
+              class="expand"
+              xmlns="http://www.w3.org/2000/svg"
+              height="48"
+              width="48"
+            >
+            <path d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z" />
+            </svg>
+            <svg   class="retract"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m24 30.45 8.65-8.65-2.15-2.1-6.5 6.5-6.5-6.5-2.15 2.1ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 24q0-4.15 1.575-7.8 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24 4q4.15 0 7.8 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Zm0-3q7.1 0 12.05-4.975Q41 31.05 41 24q0-7.1-4.95-12.05Q31.1 7 24 7q-7.05 0-12.025 4.95Q7 16.9 7 24q0 7.05 4.975 12.025Q16.95 41 24 41Zm0-17Z"/>
+            </svg>
+          </div>
+          </div>
+          <div class="accDesc">
+            <div class="subAccordtion">
+              <div onclick="sendUrl('www.youtube.com/watch?v=qz0aGYrrlhU',2);window.location.href='/vtab'" class="links"> 
+              
+              HTML tutorial
+              
+            </div>
+              <% if(chkbxs[2]){ %>
+                <style>
+                  #cb2{
+  
+                    display: block;
+                  }
+                  #ucb2{
+  
+                    display: none;
+                  }
+                  .subAccordion{
+                    display:flex;
+                    justify-content:space-between
+                  }
+                </style>
+  
+             <svg id="ucb2" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+             <svg id="cb2" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+              <path
+                d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+              />
+              </svg>
+             <%}else{ %>
+              <style>
+                #cb2{
+                    display: none;
+                }
+                #ucb2{
+                    display: block;
+                }
+              </style>
+              </svg>
+              <svg id="cb2" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+              <path
+                d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+              />
+              <svg id="ucb2" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+              <%} %>
+            </div>
+            <div class="subAccordtion">
+              <div onclick="sendUrl('www.youtube.com/watch?v=ieTHC78giGQ',3);window.location.href='/vtab'" class="links"> 
+              
+               CSS
+              
+            </div>
+              <% if(chkbxs[3]){ %>
+                <style>
+                  #cb3{
+  
+                    display: block;
+                  }
+                  #ucb3{
+  
+                    display: none;
+                  }
+                  .subAccordion{
+                    display:flex;
+                    justify-content:space-between
+                  }
+                </style>
+  
+             <svg id="ucb3" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+             <svg id="cb3" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+              <path
+                d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+              />
+              </svg>
+             <%}else{ %>
+              <style>
+                #cb3{
+                    display: none;
+                }
+                #ucb3{
+                    display: block;
+                }
+              </style>
+              </svg>
+              <svg id="cb3" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+              <path
+                d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+              />
+              <svg id="ucb3" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+              <%} %>
+            </div>
+            <div style="background-color: white;" class="subAccordtion">
+              <div  class="links"> 
+              <a  href="https://freefrontend.com/assets/img/css-forms/card-component-with-floating-labels.png" target="_blank" >
+                Design a Sign Up page similar to the one given in this image
+                <a href="https://codepen.io/havardob/pen/eYJPwdb" target="_blank">(solution)</a>
+              </a>
+            </div>
+            <% if(chkbxs[4]){ %>
+              <style>
+                #cb4{
+                    display: block;
+                }
+                #ucb4{
+                    display: none;
+                }
+              </style>
+            <svg id="ucb4" class="unchecked" onclick="chk(4)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+            <svg id="cb4" class="checked"  onclick="unChk(4)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+            <path
+              d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+            />
+            </svg>
+           <%}else{ %>
+            <style>
+              #cb4{
+                    display: none;
+              }
+              #ucb4{
+                    display: block;
+              }
+            </style>
+            </svg>
+            <svg id="cb4" class="checked"  onclick="unChk(4)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+            <path
+              d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+            />
+            <svg id="ucb4" class="unchecked" onclick="chk(4)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+            <%} %>
+            </div> 
+            <div class="subAccordtion">
+              <div onclick="sendUrl('www.youtube.com/watch?v=QC8iQqtG0hg',5);window.location.href='/vtab'" class="links"> 
+              
+              Tailwind CSS
+              
+            </div>
+              <% if(chkbxs[5]){ %>
+                <style>
+                  #cb5{
+  
+                    display: block;
+                  }
+                  #ucb5{
+  
+                    display: none;
+                  }
+                  .subAccordion{
+                    display:flex;
+                    justify-content:space-between
+                  }
+                </style>
+  
+             <svg id="ucb5" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+             <svg id="cb5" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+              <path
+                d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+              />
+              </svg>
+             <%}else{ %>
+              <style>
+                #cb5{
+                    display: none;
+                }
+                #ucb5{
+                    display: block;
+                }
+              </style>
+              </svg>
+              <svg id="cb5" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+              <path
+                d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+              />
+              <svg id="ucb5" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+              <%} %>
+            </div>
+            <div style="background-color: white;" class="subAccordtion">
+              <div class="links"> 
+              <a href="https://media.geeksforgeeks.org/wp-content/uploads/20201126160407/ezgifcomcrop1.gif" target="_blank">
+                Test out your skills and build this tic tac toe game <a href="https://www.geeksforgeeks.org/simple-tic-tac-toe-game-using-javascript/" target="_blank">(solution)</a>
+              </a>
+            </div>
+            <% if(chkbxs[6]){ %>
+              <style>
+                #cb6{
+                    display: block;
+                }
+                #ucb6{
+                    display: none;
+                }
+              </style>
+            <svg id="ucb6" class="unchecked" onclick="chk(6)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+            <svg id="cb6" class="checked"  onclick="unChk(6)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+            <path
+              d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+            />
+            </svg>
+           <%}else{ %>
+            <style>
+              #cb6{
+                    display: none;
+              }
+              #ucb6{
+                    display: block;
+              }
+            </style>
+            </svg>
+            <svg id="cb6" class="checked"  onclick="unChk(6)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+            <path
+              d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+            />
+            <svg id="ucb6" class="unchecked" onclick="chk(6)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+            <%} %>
+            </div>
+            <div class="subAccordtion">
+              <div onclick="sendUrl('www.youtube.com/watch?v=b9eMGE7QtTk',7);window.location.href='/vtab'" class="links"> 
+              
+               ReactJS
+              
+            </div>
+              <% if(chkbxs[7]){ %>
+                <style>
+                  #cb7{
+  
+                    display: block;
+                  }
+                  #ucb7{
+  
+                    display: none;
+                  }
+                  .subAccordion{
+                    display:flex;
+                    justify-content:space-between
+                  }
+                </style>
+  
+             <svg id="ucb7" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+             <svg id="cb7" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+              <path
+                d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+              />
+              </svg>
+             <%}else{ %>
+              <style>
+                #cb7{
+                    display: none;
+                }
+                #ucb7{
+                    display: block;
+                }
+              </style>
+              </svg>
+              <svg id="cb7" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+              <path
+                d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+              />
+              <svg id="ucb7" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+              <%} %>
+            </div>
+            <div style="background-color: white;border-bottom: 1px solid black;" class="subAccordtion">
+              <div class="links"> 
+              <a href="https://www.youtube.com/watch?v=I1cpb0tYV74&list=PL6QREj8te1P6wX9m5KnicnDVEucbOPsqR&index=2" target="_blank">
+                React Project (Spotify Clone)
+              </a>
+            </div>
+            <% if(chkbxs[8]){ %>
+              <style>
+                #cb8{
+                    display: block;
+                }
+                #ucb8{
+                    display: none;
+                }
+              </style>
+            <svg id="ucb8" class="unchecked" onclick="chk(8)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+            <svg id="cb8" class="checked"  onclick="unChk(8)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+            <path
+              d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+            />
+            </svg>
+           <%}else{ %>
+            <style>
+              #cb8{
+                    display: none;
+              }
+              #ucb8{
+                    display: block;
+              }
+            </style>
+            </svg>
+            <svg id="cb8" class="checked"  onclick="unChk(8)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+            <path
+              d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+            />
+            <svg id="ucb8" class="unchecked" onclick="chk(8)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+            <%} %>
+            </div>
+            </div>
+          </div>
+          <div class="accContainer">
+            <div class="accordionMid">
+              <h2>Back-end Development</h2>
+              <div class="expContr" onclick="d(2,[9,10,11,12,13,14,15])">
+              <svg
+                class="expand"
+                xmlns="http://www.w3.org/2000/svg"
+                height="48"
+                width="48"
+              >
+              <path d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z" />
+              </svg>
+              <svg   class="retract"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="m24 30.45 8.65-8.65-2.15-2.1-6.5 6.5-6.5-6.5-2.15 2.1ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 24q0-4.15 1.575-7.8 1.575-3.65 4.3-6.35 2.725-2.7 6.375-4.275Q19.9 4 24 4q4.15 0 7.8 1.575 3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24q0 4.1-1.575 7.75-1.575 3.65-4.275 6.375t-6.35 4.3Q28.15 44 24 44Zm0-3q7.1 0 12.05-4.975Q41 31.05 41 24q0-7.1-4.95-12.05Q31.1 7 24 7q-7.05 0-12.025 4.95Q7 16.9 7 24q0 7.05 4.975 12.025Q16.95 41 24 41Zm0-17Z"/>
+              </svg>
+            </div>
+            </div>
+            <div class="accDesc">
+              <div class="subAccordtion">
+                <div onclick="sendUrl('www.youtube.com/watch?v=apGV9Kg7ics',9);window.location.href='/vtab'" class="links"> 
+                
+                 Git & Github
+                
+              </div>
+                <% if(chkbxs[9]){ %>
+                  <style>
+                    #cb9{
+    
+                      display: block;
+                    }
+                    #ucb9{
+    
+                      display: none;
+                    }
+                    .subAccordion{
+                      display:flex;
+                      justify-content:space-between
+                    }
+                  </style>
+    
+               <svg id="ucb9" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+               <svg id="cb9" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+                <path
+                  d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+                />
+                </svg>
+               <%}else{ %>
+                <style>
+                  #cb9{
+                      display: none;
+                  }
+                  #ucb9{
+                      display: block;
+                  }
+                </style>
+                </svg>
+                <svg id="cb9" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+                <path
+                  d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+                />
+                <svg id="ucb9" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+                <%} %>
+              </div>
+              <div class="subAccordtion">
+                <div onclick="sendUrl('www.youtube.com/watch?v=TlB_eWDSMt4',10);window.location.href='/vtab'" class="links"> 
+                
+                 NodeJS
+                
+              </div>
+                <% if(chkbxs[10]){ %>
+                  <style>
+                    #cb10{
+    
+                      display: block;
+                    }
+                    #ucb10{
+    
+                      display: none;
+                    }
+                    .subAccordion{
+                      display:flex;
+                      justify-content:space-between
+                    }
+                  </style>
+    
+               <svg id="ucb10" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+               <svg id="cb10" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+                <path
+                  d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+                />
+                </svg>
+               <%}else{ %>
+                <style>
+                  #cb10{
+                      display: none;
+                  }
+                  #ucb10{
+                      display: block;
+                  }
+                </style>
+                </svg>
+                <svg id="cb10" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+                <path
+                  d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+                />
+                <svg id="ucb10" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+                <%} %>
+              </div>
+                <div class="subAccordtion">
+                  <div onclick="sendUrl('www.youtube.com/watch?v=SccSCuHhOw0',11);window.location.href='/vtab'" class="links"> 
+                  
+                   ExpressJS
+                  
+                </div>
+                  <% if(chkbxs[11]){ %>
+                    <style>
+                      #cb11{
+      
+                        display: block;
+                      }
+                      #ucb11{
+      
+                        display: none;
+                      }
+                      .subAccordion{
+                        display:flex;
+                        justify-content:space-between
+                      }
+                    </style>
+      
+                 <svg id="ucb11" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+                 <svg id="cb11" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+                  <path
+                    d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+                  />
+                  </svg>
+                 <%}else{ %>
+                  <style>
+                    #cb11{
+                        display: none;
+                    }
+                    #ucb11{
+                        display: block;
+                    }
+                  </style>
+                  </svg>
+                  <svg id="cb11" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+                  <path
+                    d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+                  />
+                  <svg id="ucb11" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+                  <%} %>
+                </div> 
+                <div class="subAccordtion">
+                  <div onclick="sendUrl('www.youtube.com/watch?v=5QEwqX5U_2M',12);window.location.href='/vtab'" class="links"> 
+                  
+                   MongoDB & Mongoose
+                  
+                </div>
+                  <% if(chkbxs[12]){ %>
+                    <style>
+                      #cb12{
+      
+                        display: block;
+                      }
+                      #ucb12{
+      
+                        display: none;
+                      }
+                      .subAccordion{
+                        display:flex;
+                        justify-content:space-between
+                      }
+                    </style>
+      
+                 <svg id="ucb12" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+                 <svg id="cb12" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+                  <path
+                    d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+                  />
+                  </svg>
+                 <%}else{ %>
+                  <style>
+                    #cb12{
+                        display: none;
+                    }
+                    #ucb12{
+                        display: block;
+                    }
+                  </style>
+                  </svg>
+                  <svg id="cb12" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+                  <path
+                    d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+                  />
+                  <svg id="ucb12" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+                  <%} %>
+                </div>
+                <div class="subAccordtion">
+                  <div onclick="sendUrl('www.youtube.com/watch?v=mbsmsi7l3r4',13);window.location.href='/vtab'" class="links"> 
+                  
+                   Authentication
+                  
+                </div>
+                  <% if(chkbxs[13]){ %>
+                    <style>
+                      #cb13{
+      
+                        display: block;
+                      }
+                      #ucb13{
+      
+                        display: none;
+                      }
+                      .subAccordion{
+                        display:flex;
+                        justify-content:space-between
+                      }
+                    </style>
+      
+                 <svg id="ucb13" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+                 <svg id="cb13" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+                  <path
+                    d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+                  />
+                  </svg>
+                 <%}else{ %>
+                  <style>
+                    #cb13{
+                        display: none;
+                    }
+                    #ucb13{
+                        display: block;
+                    }
+                  </style>
+                  </svg>
+                  <svg id="cb13" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+                  <path
+                    d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+                  />
+                  <svg id="ucb13" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+                  <%} %>
+                </div>
+                <div class="subAccordtion">
+                  <div onclick="sendUrl('www.youtube.com/watch?v=l8WPWK9mS5M',14);window.location.href='/vtab'" class="links"> 
+                  
+                   REST API
+                  
+                </div>
+                  <% if(chkbxs[14]){ %>
+                    <style>
+                      #cb14{
+      
+                        display: block;
+                      }
+                      #ucb14{
+      
+                        display: none;
+                      }
+                      .subAccordion{
+                        display:flex;
+                        justify-content:space-between
+                      }
+                    </style>
+      
+                 <svg id="ucb14" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+                 <svg id="cb14" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+                  <path
+                    d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+                  />
+                  </svg>
+                 <%}else{ %>
+                  <style>
+                    #cb14{
+                        display: none;
+                    }
+                    #ucb14{
+                        display: block;
+                    }
+                  </style>
+                  </svg>
+                  <svg id="cb14" class="checked"   xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+                  <path
+                    d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+                  />
+                  <svg id="ucb14" class="unchecked"  xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+                  <%} %>
+                </div>
+                <div style="background-color: white;border-bottom: 1px solid black;" class="subAccordtion">
+                  <div class="links"> 
+                  <a href="https://www.youtube.com/watch?v=xKs2IZZya7c" target="_blank">
+                   MERN Project (Blog App)
+                  </a>
+                </div>
+                <% if(chkbxs[15]){ %>
+                  <style>
+                    #cb15{
+                        display: block;
+                    }
+                    #ucb15{
+                        display: none;
+                    }
+                  </style>
+                <svg id="ucb15" class="unchecked" onclick="chk(15)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+                <svg id="cb15" class="checked"  onclick="unChk(15)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+                <path
+                  d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+                />
+                </svg>
+               <%}else{ %>
+                <style>
+                  #cb15{
+                        display: none;
+                  }
+                  #ucb15{
+                        display: block;
+                  }
+                </style>
+                </svg>
+                <svg id="cb15" class="checked"  onclick="unChk(15)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M20.95 31.95 35.4 17.5l-2.15-2.15-12.3 12.3L15 21.7l-2.15 2.15ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>
+                <path
+                  d="M14.15 30.75 12 28.6l12-12 12 11.95-2.15 2.15L24 20.85Z"
+                />
+                <svg id="ucb15" class="unchecked" onclick="chk(15)" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Z"/></svg>
+                <%} %>
+                </div>
+              </div>
+            </div>
+      </div>
+      
+      <footer>
+        <div class="footerContent">
+
+        <div class="footerInfo">
+          <a href="" >
+            <div class="logo_container2">
+              <img class="logo2" src="./images/road-signs-svgrepo-com.svg" alt="" />
+              <div class="Comp_endium2">Comp.endium</div>
+            </div>
+            </a>
+            <div class="infoText">
+              by 
+              <button class="SignIn">
+                <a href="" class="signInAnchor">HaVoK9802</a>
+              </button>
+              <button class="SignIn">
+                <a href="" class="signInAnchor">vemurifai</a>
+              </button>
+            </div>
+        </div>
+        <div class="footerText">
+          Structured resources and a playground to help you get started in your Full Stack Development journey.
+        </div>
+        <div class="navButtons3">
+          <!---- <div class="mainNav">-->
+          <a href=""><li class="f">FAQs</li></a>
+
+          <a href=""><li class="f">Terms</li></a>
+        
+          <a href=""><li class="f">Privacy</li></a>
+         
+          <!-- <a href=""><li class="f">Donate</li></a> -->
+          <!-- </div> -->
+        </div>
+      </div>
+      </footer>
+
+
+    <script src="user.js">
+      
+    </script>
+  </body>
+
+
+</html>

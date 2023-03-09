@@ -1,0 +1,962 @@
+@font-face {
+  font-family: RobotoMono;
+  src: url(./Roboto_Mono/static/RobotoMono-Regular.ttf);
+}
+@font-face {
+  font-family: RobotoMonoBold;
+  src: url(./Roboto_Mono/static/RobotoMono-Bold.ttf);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.nav {
+  height: 80px;
+  width: 100%;
+  background-color: #e1f4f3;
+  background-size: cover;
+  border-bottom: 1px solid #333333;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  z-index: 2;
+}
+.navBgColor {
+  transition-duration: 0.5s;
+  background-color: white;
+  border-bottom: 1px solid black;
+}
+
+/* header {
+    width: 100%;
+    height: 620px;
+    background-color: #e1f4f3;
+    background-size: cover;
+  }
+  */
+
+.container {
+  width: 100%;
+  background-color: FFFFFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 1000px;
+}
+
+.text {
+  height: 100px;
+}
+
+.track {
+  height: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+.logo_container {
+  background-color: transparent;
+  height: 90px;
+  width: 220px;
+  margin-left: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo {
+  height: 65px;
+  margin-right: 5px;
+}
+
+.Comp_endium {
+  font-family: RobotoMonoBold;
+  font-size: 30px;
+  font-style: bold;
+  color: #333333;
+}
+
+.navButtons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 110px;
+  background-color: transparent;
+  width: 650px;
+  height: 90px;
+  font-family: RobotoMono;
+  font-size: 19px;
+}
+
+li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  height: 35px;
+  width: 105px;
+  border-radius: 100px;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #333333;
+}
+li:hover {
+  color: #706c61;
+}
+
+.SignIn {
+  border: 0px;
+  height: 40px;
+  width: 140px;
+  border-radius: 100px;
+  background-color: #333333;
+  font-family: RobotoMono;
+  font-size: 19px;
+}
+.SignIn:hover {
+  background-color: #706c61;
+  transition-duration: 0.2s;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+a:hover {
+  cursor: pointer;
+}
+
+#loggedInUser {
+  height: 60px;
+  width: 200px;
+}
+
+.signInAnchor {
+  text-decoration: none;
+  color: white;
+}
+
+.headerLeft {
+  width: 100%;
+  height: 560px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.mainHeaderText {
+  display: flex;
+  justify-content: left;
+  padding-left: 135px;
+  align-items: center;
+  padding-top: 100px;
+  margin-top: 90px;
+  width: 700px;
+  height: 120px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 90px;
+  color: #333333;
+}
+.quote {
+  display: flex;
+  justify-content: left;
+  align-content: top;
+  height: 190px;
+  width: 100%;
+  margin-top: 10px;
+  padding-left: 135px;
+  flex-wrap: wrap;
+  color: #333333;
+  font-family: RobotoMono;
+  font-size: 30px;
+}
+.getStarted {
+  left: 0px;
+  margin-top: 90px;
+
+  height: 50px;
+  width: 100%;
+  z-index: 0;
+}
+#getStarted {
+  height: 50px;
+  width: 160px;
+  position: relative;
+  bottom: 50px;
+}
+
+.FullStackRM {
+  padding-top: 80px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-top: 1px solid #333333;
+}
+.FSTitle {
+  display: flex;
+
+  width: 100%;
+  text-align: center;
+  padding-left: 325px;
+  padding-top: 80px;
+  align-items: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 90px;
+  color: #333333;
+}
+.FSSubTitle {
+  display: flex;
+  width: 100%;
+  padding-left: 135px;
+  padding-right: 135px;
+  text-align: center;
+  align-items: center;
+  font-family: Robotomono;
+  font-size: 23px;
+  color: #333333;
+  padding-bottom: 30px;
+}
+
+.dummy {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 160px;
+}
+
+.accContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 1160px;
+  max-width: 1160px;
+}
+
+.headin {
+  font-family: Robotomono;
+  font-size: 25px;
+  align-content: center;
+}
+.accordionTop {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+  align-items: center;
+  width: inherit;
+  height: 80px;
+  /* border-top-left-radius: 6px;
+    border-top-right-radius: 6px; */
+  border: 1px solid #706c61;
+
+  font-family: Robotomono;
+  font-size: 15px;
+  color: #333333;
+}
+
+.accDesc {
+  background-color: #706c61;
+  width: inherit;
+  justify-content: center;
+}
+
+.expContr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.retract {
+  display: none;
+  fill: #333333;
+}
+.retract:hover {
+  fill: #706c61;
+  transition-duration: 0.4s;
+}
+.expand {
+  display: block;
+
+  fill: #333333;
+}
+.expand:hover {
+  fill: #706c61;
+  transition-duration: 0.4s;
+}
+
+.links {
+  width: 940px;
+  max-width: 940px;
+}
+
+.subAccordtion {
+  background-color: #e1f4f3;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: inherit;
+  padding-left: 90px;
+  border-bottom: 1px solid #706c61;
+  border-left: 1px solid #706c61;
+  border-right: 1px solid #706c61;
+  font-family: Robotomono;
+  font-size: 20px;
+  color: #333333;
+}
+.unchecked {
+  fill: #333333;
+  display: block;
+}
+.unchecked:hover {
+  fill: #706c61;
+  transition-duration: 0.4s;
+}
+.checked {
+  display: none;
+  fill: #333333;
+}
+
+.checked:hover {
+  fill: #706c61;
+  transition-duration: 0.4s;
+}
+
+footer {
+  height: 300px;
+  width: 100%;
+  border-top: 1px solid #333333;
+  background-color: #e1f4f3;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.f {
+  justify-content: center;
+
+  width: 105px;
+  /* border-radius: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 0px; */
+}
+
+.footerContent {
+  width: 570px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerInfo {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  width: 550px;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: green; */
+}
+
+.infoText {
+  font-family: RobotoMono;
+  font-size: 15px;
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  width: 360px;
+  /* background-color: white; */
+}
+
+.logo_container2 {
+  background-color: transparent;
+  height: 60px;
+  width: 150px;
+  margin-left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: blue; */
+}
+
+.logo2 {
+  height: 30px;
+  margin-right: 5px;
+}
+
+.Comp_endium2 {
+  font-family: RobotoMonoBold;
+  font-size: 18px;
+  font-style: bold;
+  color: #333333;
+}
+
+.footerText {
+  font-family: RobotoMono;
+  color: #333333;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: top;
+  height: 70px;
+  width: 550px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  /* background-color: gold; */
+}
+
+.navButtons3 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 0px;
+  background-color: transparent;
+  width: 530px;
+  height: 60px;
+  font-family: RobotoMono;
+  font-size: 14px;
+  flex-wrap: wrap;
+  /* background-color: red; */
+  margin-top: 20px;
+}
+
+.signInorLogIn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.8);
+  background-blend-mode: multiply;
+  /* opacity: 0.5; */
+  position: fixed;
+  z-index: 3;
+}
+
+.SignUpbox {
+  /* box-shadow: 0px 0px 10px 1px #333333; */
+  background-color: white;
+  border: 1px solid #333333;
+  height: 650px;
+  width: 600px;
+  z-index: 4;
+  display: flex;
+  /* display: none; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  /* opacity: 10; */
+}
+
+.LogInbox {
+  background-color: white;
+  border: 1px solid #333333;
+  height: 650px;
+  width: 600px;
+  z-index: 4;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute; */
+}
+
+.signUpOrLogInButton {
+  width: 225px;
+  height: 48px;
+  padding-left: 10px;
+  border-radius: 100px;
+  border: 1px solid #333333;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-family: RobotoMono;
+  font-size: 13px;
+}
+
+.signUpOrLogInButton:hover {
+  background-color: #e1f4f3;
+  transition-duration: 0.2s;
+}
+
+.LogIn:hover {
+  color: #706c61;
+}
+
+.close {
+  fill: #333333;
+  position: relative;
+  left: 255px;
+  bottom: 105px;
+  z-index: inherit;
+}
+
+.JoinOrWelcome {
+  color: #333333;
+  font-size: 34px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+  margin-bottom: 50px;
+}
+
+.aldreadyHaveAnAccount {
+  color: #333333;
+  font-family: RobotoMono;
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+.co {
+  margin-right: 10px;
+}
+
+@media (max-width: 1280px) {
+  .FSTitle {
+    padding-left: 60px;
+  }
+  .FSSubTitle {
+    padding-top: 70px;
+  }
+  .accContainer {
+    width: 780px;
+    max-width: 780px;
+  }
+  .links {
+    width: 660px;
+    max-width: 660px;
+  }
+  .accordionTop {
+    margin-top: 180px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+  .accordionMid {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+  .subAccordtion {
+    padding-left: 30px;
+    font-size: 17px;
+  }
+  .unchecked {
+    left: 146px;
+  }
+  .checked {
+    left: 146px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .FSTitle {
+    padding-left: 0px;
+  }
+  .FSSubTitle {
+    padding-top: 30px;
+  }
+  .navButtons {
+    width: 500px;
+    margin-left: 40px;
+  }
+  #aboutUs {
+    display: none;
+  }
+  .SignIn {
+    margin-left: 0px;
+  }
+  .navButtons {
+    width: 300px;
+  }
+  .rm {
+    display: none;
+  }
+  .SignIn {
+    margin-left: 0px;
+  }
+
+  .accContainer {
+    width: 780px;
+    max-width: 780px;
+  }
+  .links {
+    width: 660px;
+    max-width: 660px;
+  }
+  .accordionTop {
+    margin-top: 140px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+  .accordionMid {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+  .subAccordtion {
+    padding-left: 30px;
+    font-size: 17px;
+  }
+  .unchecked {
+    left: 146px;
+  }
+  .checked {
+    left: 146px;
+  }
+}
+
+@media (max-width: 950px) {
+  .FSTitle {
+    padding-left: 0px;
+  }
+  .FSSubTitle {
+    padding-top: 40px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .navButtons {
+    width: 300px;
+  }
+  .rm {
+    display: none;
+  }
+  .SignIn {
+    margin-left: 0px;
+  }
+
+  .accContainer {
+    width: 710px;
+    max-width: 710px;
+  }
+  .links {
+    width: 590px;
+    max-width: 590px;
+  }
+  .accordionTop {
+    margin-top: 140px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+  .accordionMid {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+  .subAccordtion {
+    padding-left: 30px;
+    font-size: 17px;
+  }
+  .unchecked {
+    left: 112px;
+  }
+  .checked {
+    left: 112px;
+  }
+}
+
+@media (max-width: 820px) {
+  .mainHeaderText {
+    padding-left: 100px;
+  }
+  .quote {
+    padding-left: 100px;
+  }
+  .FSTitle {
+    font-size: 80px;
+  }
+  .accordionTop {
+    margin-top: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+  .accordionMid {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 769px) {
+  .mainHeaderText {
+    margin-left: 70px;
+  }
+  .quote {
+    margin-left: 70px;
+  }
+
+  .FSTitle {
+    padding-left: 30px;
+    font-size: 60px;
+    padding-top: 0px;
+  }
+  .FSSubTitle {
+    font-size: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 60px;
+  }
+
+  #getStarted {
+    display: none;
+  }
+
+  .quote {
+    padding-left: 30px;
+    margin-top: 100px;
+  }
+  .mainHeaderText {
+    padding-left: 30px;
+  }
+  .Comp_endium {
+    font-size: 17px;
+  }
+  .nav {
+    padding-left: 0px;
+  }
+  .navButtons {
+    margin-right: 0px;
+  }
+  .logo_container {
+    margin-left: 25px;
+  }
+  .logo {
+    height: 30px;
+    margin-right: 0px;
+  }
+  .SignIn {
+    margin-right: 10px;
+  }
+  li {
+    display: none;
+  }
+
+  .f {
+    display: flex;
+  }
+
+  .accContainer {
+    width: 580px;
+    max-width: 580px;
+  }
+  .links {
+    width: 460px;
+    max-width: 460px;
+  }
+  .accordionTop {
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+  .accordionMid {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+  .subAccordtion {
+    padding-left: 30px;
+    font-size: 17px;
+  }
+  .unchecked {
+    left: 46px;
+  }
+  .checked {
+    left: 46px;
+  }
+}
+
+@media (max-width: 650px) {
+  .mainHeaderText {
+    margin-left: 30px;
+  }
+  .quote {
+    margin-left: 30px;
+  }
+  .accContainer {
+    width: 540px;
+    max-width: 540px;
+  }
+  .links {
+    width: 420px;
+    max-width: 420px;
+  }
+
+  .accordionTop {
+    margin-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+  .accordionMid {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+  }
+  .subAccordtion {
+    padding-left: 30px;
+    font-size: 17px;
+  }
+  .unchecked {
+    left: 26px;
+  }
+  .checked {
+    left: 26px;
+  }
+  .f {
+    margin-top: 15px;
+    width: 200px;
+  }
+  .SignUpbox {
+    width: 390px;
+  }
+
+  .LogInBox {
+    width: 390px;
+  }
+
+  .close {
+    left: 150px;
+  }
+}
+
+@media (max-width: 541px) {
+  .FSTitle {
+    margin-top: 50px;
+  }
+  .accContainer {
+    width: 440px;
+    max-width: 540px;
+  }
+  .links {
+    width: 350px;
+    max-width: 350px;
+  }
+  .logo_container {
+    width: 150px;
+  }
+  .accordionTop {
+    height: 50px;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 10px;
+  }
+  .accordionMid {
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 10px;
+  }
+  .subAccordtion {
+    padding-left: 15px;
+    font-size: 14px;
+  }
+  .unchecked {
+    left: 10px;
+  }
+  .checked {
+    left: 10px;
+  }
+  .navButtons3 {
+    width: 390px;
+    margin-top: 70px;
+  }
+  .footerText {
+    width: 390px;
+  }
+  .f {
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+  }
+  .footerInfo {
+    width: 390px;
+    height: 200px;
+    justify-content: center;
+    margin-top: 0px;
+  }
+  .infoText {
+    height: 140px;
+    flex-direction: column;
+  }
+  footer {
+    height: 550px;
+  }
+  .footerText {
+    width: 350px;
+  }
+  .logo_container2 {
+    width: 200px;
+  }
+  .logo2 {
+    height: 40px;
+  }
+  .Comp_endium2 {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 420px) {
+  .mainHeaderText {
+    font-size: 80px;
+  }
+
+  .FSTitle {
+    margin-top: 50px;
+  }
+  .links {
+    width: 280px;
+    max-width: 280px;
+  }
+  .accContainer {
+    width: 370px;
+    max-width: 370px;
+  }
+  .accordionTop {
+    height: 80px;
+    margin-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 9px;
+  }
+  .accordionMid {
+    height: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 9px;
+  }
+  .subAccordtion {
+    height: 60px;
+    padding-left: 10px;
+    font-size: 11px;
+  }
+  .unchecked {
+    left: 1px;
+  }
+  .checked {
+    left: 1px;
+  }
+}
