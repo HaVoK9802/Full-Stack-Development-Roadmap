@@ -4,6 +4,7 @@ const n = document.querySelectorAll("div.expContr");
 let exp = document.querySelectorAll("svg.expand");
 let ret = document.querySelectorAll("svg.retract");
 let sub = document.querySelectorAll("div.subAccordtion");
+
 let signUpOrLogIn = document.getElementById("suOli");
 let close = document.querySelectorAll("svg.close");
 let suBox = document.getElementById("suBox");
